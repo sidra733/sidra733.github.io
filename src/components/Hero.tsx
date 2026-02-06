@@ -6,11 +6,11 @@ const Hero = () => {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl" />
       
       <div className="max-w-3xl mx-auto text-center relative z-10">
-        <div className="inline-block mb-6">
-          <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground border border-border rounded-full px-6 py-2 bg-card/80 backdrop-blur-sm">
-            Analytics · Operations 
-          </p>
-        </div>
+      <div className="inline-block mb-6">
+  <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground border border-border rounded-full px-6 py-2 bg-card/80 backdrop-blur-sm">
+    Software • Data • Technology
+  </p>
+</div>
         <h1 className="text-5xl md:text-6xl font-medium text-foreground mb-8 tracking-tight leading-tight">
           Sidra Fiaz
         </h1>
