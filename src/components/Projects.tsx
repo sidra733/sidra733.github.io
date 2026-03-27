@@ -1,100 +1,171 @@
-import { BarChart3, Calendar } from "lucide-react";
+import { BarChart3, Calendar, Truck } from "lucide-react";
 import beautyBookHome from "@/assets/beauty-book-home.png";
-import beautyBookApproval from "@/assets/beauty-book-approval.png";
+import supplyChainDashboard from "@/assets/supply-chain-dashboard.png";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-6 bg-primary text-primary-foreground">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-24 px-3 md:px-6 bg-primary text-primary-foreground">
+      <div className="w-full max-w-none px-4 md:px-8 lg:px-12">
+        
+        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary-foreground/60 mb-4">Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-medium text-primary-foreground">Featured Projects</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-primary-foreground/60 mb-4">
+            Portfolio
+          </p>
+          <h2 className="text-4xl md:text-5xl font-medium text-primary-foreground mb-4">
+            Featured Projects
+          </h2>
+          <p className="max-w-2xl mx-auto text-primary-foreground/70 leading-relaxed">
+            A selection of analytics and application projects focused on business insights,
+            operations improvement, and user-centered design.
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* E-Commerce Sales Dashboard */}
-          <div className="bg-primary-foreground/5 rounded-3xl p-8 border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300">
+        {/* Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch w-full">
+
+          {/* E-Commerce */}
+          <div className="h-full rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 backdrop-blur-sm hover:bg-primary-foreground/10 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-primary-foreground/10 flex items-center justify-center">
                 <BarChart3 className="w-5 h-5 text-primary-foreground/80" />
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-primary-foreground/50">Data Analytics</span>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/50">
+                Data Analytics
+              </p>
             </div>
-            
-            <h3 className="font-serif text-2xl md:text-3xl text-primary-foreground mb-4">
+
+            <h3 className="font-serif text-2xl md:text-3xl mb-4">
               E-Commerce Sales Dashboard
             </h3>
-            
-            <p className="text-primary-foreground/70 leading-relaxed mb-6">
-              Interactive dashboard visualizing monthly sales, expenses, and product performance. 
-              Automated data updates using Power Query to maintain a single source of truth for business tracking.
+
+            <p className="text-primary-foreground/70 leading-8 mb-6">
+              Interactive dashboard built to track monthly sales, expenses, and product performance
+              while improving reporting consistency through automated data updates.
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="text-xs px-4 py-1.5 bg-primary-foreground/10 rounded-full text-primary-foreground border border-primary-foreground/20">Power BI</span>
-              <span className="text-xs px-4 py-1.5 bg-primary-foreground/10 rounded-full text-primary-foreground border border-primary-foreground/20">Excel</span>
-              <span className="text-xs px-4 py-1.5 bg-primary-foreground/10 rounded-full text-primary-foreground border border-primary-foreground/20">Power Query</span>
+              <span className="chip">Power BI</span>
+              <span className="chip">Excel</span>
+              <span className="chip">Power Query</span>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-primary-foreground/10 text-center">
               <div>
-                <p className="text-2xl font-serif text-primary-foreground">25%</p>
-                <p className="text-xs text-primary-foreground/50">Accuracy Improved</p>
+                <p className="text-2xl font-serif">25%</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Accuracy</p>
               </div>
               <div>
-                <p className="text-2xl font-serif text-primary-foreground">Auto</p>
-                <p className="text-xs text-primary-foreground/50">Data Updates</p>
+                <p className="text-2xl font-serif">Auto</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Updates</p>
               </div>
               <div>
-                <p className="text-2xl font-serif text-primary-foreground">Live</p>
-                <p className="text-xs text-primary-foreground/50">Tracking</p>
+                <p className="text-2xl font-serif">Live</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Tracking</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Supply Chain */}
+          <div className="h-full rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 backdrop-blur-sm hover:bg-primary-foreground/10 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-11 h-11 rounded-2xl bg-primary-foreground/10 flex items-center justify-center">
+                <Truck className="w-5 h-5 text-primary-foreground/80" />
+              </div>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/50">
+                Operations Analytics
+              </p>
+            </div>
+
+            <h3 className="font-serif text-2xl md:text-3xl mb-5">
+              Supply Chain Performance Dashboard
+            </h3>
+
+            <div className="mb-6 rounded-2xl overflow-hidden border border-primary-foreground/15 bg-white p-4 shadow-lg">
+              <img
+                src={supplyChainDashboard}
+                alt="Supply Chain Dashboard"
+                className="w-full h-72 object-contain"
+              />
+            </div>
+
+            <p className="text-primary-foreground/70 leading-8 mb-6">
+              Built 4 dashboards and pivot tables to evaluate supplier performance, shipping costs,
+              fulfillment time trends, and operational efficiency.
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+              <span className="chip">Excel</span>
+              <span className="chip">Pivot Tables</span>
+              <span className="chip">Dashboard Design</span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-primary-foreground/10 text-center">
+              <div>
+                <p className="text-2xl font-serif">4</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Dashboards</p>
+              </div>
+              <div>
+                <p className="text-2xl font-serif">4</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Pivot Tables</p>
+              </div>
+              <div>
+                <p className="text-2xl font-serif">Multi</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Insights</p>
               </div>
             </div>
           </div>
 
           {/* Beauty Book */}
-          <div className="bg-primary-foreground/5 rounded-3xl p-8 border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300">
+          <div className="h-full rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 backdrop-blur-sm hover:bg-primary-foreground/10 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-primary-foreground/10 flex items-center justify-center">
                 <Calendar className="w-5 h-5 text-primary-foreground/80" />
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-primary-foreground/50">Web Application</span>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/50">
+                Web Application
+              </p>
             </div>
-            
-            <h3 className="font-serif text-2xl md:text-3xl text-primary-foreground mb-4">
+
+            <h3 className="font-serif text-2xl md:text-3xl mb-5">
               Beauty Book
             </h3>
-            
-            <p className="text-primary-foreground/70 leading-relaxed mb-6">
-              Salon management app for small business owners to streamline appointment scheduling, 
-              customer check-ins, and manage client information efficiently.
-            </p>
 
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="text-xs px-4 py-1.5 bg-primary-foreground/10 rounded-full text-primary-foreground border border-primary-foreground/20">HTML5</span>
-              <span className="text-xs px-4 py-1.5 bg-primary-foreground/10 rounded-full text-primary-foreground border border-primary-foreground/20">CSS3</span>
-              <span className="text-xs px-4 py-1.5 bg-primary-foreground/10 rounded-full text-primary-foreground border border-primary-foreground/20">JavaScript</span>
-              <span className="text-xs px-4 py-1.5 bg-primary-foreground/10 rounded-full text-primary-foreground border border-primary-foreground/20">JSON</span>
+            <div className="mb-6 rounded-2xl overflow-hidden border border-primary-foreground/15 bg-white p-4 shadow-lg">
+              <img
+                src={beautyBookHome}
+                alt="Beauty Book"
+                className="w-full h-72 object-contain"
+              />
             </div>
 
-            {/* Screenshot Images */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="aspect-[4/3] rounded-xl border border-primary-foreground/15 overflow-hidden">
-                <img 
-                  src={beautyBookHome} 
-                  alt="Beauty Book Home Page"
-                  className="w-full h-full object-cover"
-                />
+            <p className="text-primary-foreground/70 leading-8 mb-6">
+              Appointment and client management application designed to streamline scheduling,
+              service tracking, and approval workflows.
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+              <span className="chip">HTML</span>
+              <span className="chip">CSS</span>
+              <span className="chip">JavaScript</span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-primary-foreground/10 text-center">
+              <div>
+                <p className="text-2xl font-serif">Multi</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Pages</p>
               </div>
-              <div className="aspect-[4/3] rounded-xl border border-primary-foreground/15 overflow-hidden">
-                <img 
-                  src={beautyBookApproval} 
-                  alt="Beauty Book Approval Page"
-                  className="w-full h-full object-cover"
-                />
+              <div>
+                <p className="text-2xl font-serif">UI</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Design</p>
+              </div>
+              <div>
+                <p className="text-2xl font-serif">Live</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">Project</p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
