@@ -38,8 +38,7 @@ const Navigation = () => {
             SF
           </div>
           <div>
-            <p className="text-sm font-semibold tracking-wide text-foreground">Sidra Fiaz</p>
-            <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">Data + Product</p>
+            <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground">Portfolio</p>
           </div>
         </a>
 
