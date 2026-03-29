@@ -1,6 +1,4 @@
 import { BarChart3, Calendar, ChevronRight, Truck } from "lucide-react";
-import beautyBookHome from "@/assets/beauty-book-home.png";
-import supplyChainDashboard from "@/assets/supply-chain-dashboard.png";
 
 const projects = [
   {
@@ -20,7 +18,7 @@ const projects = [
     title: "Supply Chain Performance Dashboard",
     tag: "Operations Analytics",
     icon: Truck,
-    image: supplyChainDashboard,
+    image: "/images/supply-chain-dashboard.png",
     description:
       "Analyzed supplier, transportation, and regional performance to surface delivery bottlenecks, shipping cost issues, and fulfillment inefficiencies.",
     impact: [
@@ -34,7 +32,7 @@ const projects = [
     title: "Beauty Book",
     tag: "Workflow Application",
     icon: Calendar,
-    image: beautyBookHome,
+    image: "/images/beauty-book-home.png",
     description:
       "Designed a service scheduling and client management app to streamline appointment handling, customer support workflows, and approval processes.",
     impact: [
