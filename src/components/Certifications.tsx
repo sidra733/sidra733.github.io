@@ -1,46 +1,59 @@
-import { Award } from "lucide-react";
+import { Award, BadgeCheck } from "lucide-react";
+
+const certifications = [
+  {
+    title: "Google Data Analytics Professional Certificate",
+    issuer: "Coursera",
+    completed: "February 2026",
+  },
+  {
+    title: "Salesforce Sales Operations Professional Certificate",
+    issuer: "Salesforce",
+    completed: "February 2026",
+  },
+];
 
 const Certifications = () => {
-  const certifications = [
-    {
-      title: "Google Data Analytics Professional Certificate",
-      issuer: "Coursera",
-      completed: "Feb 2026",
-    },
-    {
-      title: "Ask Questions to Make Data-Driven Decisions Certificate",
-      issuer: "Coursera",
-      completed: "Feb 2026",
-    },
-  ];
-
   return (
-    <section id="certifications" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">Credentials</p>
-          <h2 className="text-4xl md:text-5xl font-medium text-foreground">Certifications</h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {certifications.map((cert, index) => (
-            <div 
-              key={index} 
-              className="bg-card rounded-2xl p-6 border border-border hover:border-primary/30 transition-all duration-300"
-              style={{ boxShadow: 'var(--shadow-soft)' }}
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
-                  <Award className="w-5 h-5 text-foreground" />
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-foreground mb-1">{cert.title}</p>
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                  <p className="text-xs text-muted-foreground mt-2">Completed: {cert.completed}</p>
-                </div>
-              </div>
+    <section id="certifications" className="px-4 py-8 md:px-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="section-shell px-6 py-10 md:px-10 md:py-12">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <div className="eyebrow">Credentials</div>
+              <h2 className="mt-5 text-4xl font-bold text-foreground md:text-5xl">Certifications</h2>
             </div>
-          ))}
+            <p className="max-w-xl text-sm leading-7 text-muted-foreground">
+              Formal coursework matters more when it clearly supports the work. These credentials
+              reinforce my focus on structured analysis, questioning assumptions, and building
+              reporting habits that support decision-making.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {certifications.map((cert) => (
+              <div
+                key={cert.title}
+                className="rounded-[1.75rem] border border-border bg-background/60 p-6 transition duration-300 hover:border-primary/40 hover:shadow-[var(--shadow-soft)]"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/12 text-primary">
+                      <Award className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xl font-semibold text-foreground">{cert.title}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">{cert.issuer}</p>
+                    </div>
+                  </div>
+                  <BadgeCheck className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                </div>
+                <p className="mt-6 text-sm uppercase tracking-[0.25em] text-muted-foreground">
+                  Completed {cert.completed}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

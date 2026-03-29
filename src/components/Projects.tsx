@@ -1,171 +1,124 @@
-import { BarChart3, Calendar, Truck } from "lucide-react";
+import { BarChart3, Calendar, ChevronRight, Truck } from "lucide-react";
 import beautyBookHome from "@/assets/beauty-book-home.png";
 import supplyChainDashboard from "@/assets/supply-chain-dashboard.png";
 
+const projects = [
+  {
+    title: "E-Commerce Sales Dashboard",
+    tag: "Data Analytics",
+    icon: BarChart3,
+    description:
+      "Built an interactive Power BI dashboard to track monthly sales, expenses, and product performance with cleaner reporting and faster visibility into demand patterns.",
+    impact: [
+      "Centralized monthly KPI reporting",
+      "Automated refreshes with Power Query",
+      "Improved reporting accuracy by 25%",
+    ],
+    stack: ["Power BI", "Excel", "Power Query"],
+  },
+  {
+    title: "Supply Chain Performance Dashboard",
+    tag: "Operations Analytics",
+    icon: Truck,
+    image: supplyChainDashboard,
+    description:
+      "Analyzed supplier, transportation, and regional performance to surface delivery bottlenecks, shipping cost issues, and fulfillment inefficiencies.",
+    impact: [
+      "4 supplier dashboards",
+      "4 supporting pivot tables",
+      "Trend analysis across 3 product categories",
+    ],
+    stack: ["Excel", "Pivot Tables", "Dashboard Design"],
+  },
+  {
+    title: "Beauty Book",
+    tag: "Workflow Application",
+    icon: Calendar,
+    image: beautyBookHome,
+    description:
+      "Designed a service scheduling and client management app to streamline appointment handling, customer support workflows, and approval processes.",
+    impact: [
+      "Multi-page client flow",
+      "Workflow-focused UI patterns",
+      "Operational support for salon bookings",
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+  },
+];
+
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-3 md:px-6 bg-primary text-primary-foreground">
-      <div className="w-full max-w-none px-4 md:px-8 lg:px-12">
-        
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary-foreground/60 mb-4">
-            Portfolio
-          </p>
-          <h2 className="text-4xl md:text-5xl font-medium text-primary-foreground mb-4">
-            Featured Projects
-          </h2>
-          <p className="max-w-2xl mx-auto text-primary-foreground/70 leading-relaxed">
-            A selection of analytics and application projects focused on business insights,
-            operations improvement, and user-centered design.
-          </p>
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch w-full">
-
-          {/* E-Commerce */}
-          <div className="h-full rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 backdrop-blur-sm hover:bg-primary-foreground/10 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-11 h-11 rounded-2xl bg-primary-foreground/10 flex items-center justify-center">
-                <BarChart3 className="w-5 h-5 text-primary-foreground/80" />
-              </div>
-              <p className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/50">
-                Data Analytics
+    <section id="projects" className="px-4 py-8 md:px-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="section-shell px-6 py-10 md:px-10 md:py-12">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <div className="eyebrow">Projects</div>
+              <h2 className="mt-5 text-4xl font-bold text-foreground md:text-5xl">Projects</h2>
+              <p className="mt-5 text-lg leading-8 text-muted-foreground">
+                These projects are strongest when they show how I approach problems: clarify the
+                metric, structure the data, and present the result in a way a team can actually use.
               </p>
             </div>
-
-            <h3 className="font-serif text-2xl md:text-3xl mb-4">
-              E-Commerce Sales Dashboard
-            </h3>
-
-            <p className="text-primary-foreground/70 leading-8 mb-6">
-              Interactive dashboard built to track monthly sales, expenses, and product performance
-              while improving reporting consistency through automated data updates.
+            <p className="max-w-sm text-sm leading-7 text-muted-foreground">
+              My portfolio mixes analysis, operations thinking, and interface work because I often
+              operate between the data layer and the people consuming it.
             </p>
-
-            <div className="flex flex-wrap gap-2 mb-8">
-              <span className="chip">Power BI</span>
-              <span className="chip">Excel</span>
-              <span className="chip">Power Query</span>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-primary-foreground/10 text-center">
-              <div>
-                <p className="text-2xl font-serif">25%</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Accuracy</p>
-              </div>
-              <div>
-                <p className="text-2xl font-serif">Auto</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Updates</p>
-              </div>
-              <div>
-                <p className="text-2xl font-serif">Live</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Tracking</p>
-              </div>
-            </div>
           </div>
 
-          {/* Supply Chain */}
-          <div className="h-full rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 backdrop-blur-sm hover:bg-primary-foreground/10 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-11 h-11 rounded-2xl bg-primary-foreground/10 flex items-center justify-center">
-                <Truck className="w-5 h-5 text-primary-foreground/80" />
-              </div>
-              <p className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/50">
-                Operations Analytics
-              </p>
-            </div>
+          <div className="mt-10 grid gap-6 xl:grid-cols-3">
+            {projects.map((project) => (
+              <article
+                key={project.title}
+                className="flex h-full flex-col rounded-[1.75rem] border border-border bg-background/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/35"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/12 text-primary">
+                      <project.icon className="h-5 w-5" />
+                    </div>
+                    <p className="text-xs uppercase tracking-[0.3em] text-primary">{project.tag}</p>
+                  </div>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                </div>
 
-            <h3 className="font-serif text-2xl md:text-3xl mb-5">
-              Supply Chain Performance Dashboard
-            </h3>
+                <h3 className="mt-6 text-2xl font-bold text-foreground">{project.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">{project.description}</p>
 
-            <div className="mb-6 rounded-2xl overflow-hidden border border-primary-foreground/15 bg-white p-4 shadow-lg">
-              <img
-                src={supplyChainDashboard}
-                alt="Supply Chain Dashboard"
-                className="w-full h-72 object-contain"
-              />
-            </div>
+                {project.image && (
+                  <div className="mt-6 overflow-hidden rounded-[1.4rem] border border-border bg-slate-950/80 p-3">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-56 w-full rounded-[1rem] object-cover object-top"
+                    />
+                  </div>
+                )}
 
-            <p className="text-primary-foreground/70 leading-8 mb-6">
-              Built 4 dashboards and pivot tables to evaluate supplier performance, shipping costs,
-              fulfillment time trends, and operational efficiency.
-            </p>
+                <div className="mt-6">
+                  <p className="text-xs uppercase tracking-[0.28em] text-muted-foreground">Impact</p>
+                  <div className="mt-4 space-y-3">
+                    {project.impact.map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-sm text-foreground"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-            <div className="flex flex-wrap gap-2 mb-8">
-              <span className="chip">Excel</span>
-              <span className="chip">Pivot Tables</span>
-              <span className="chip">Dashboard Design</span>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-primary-foreground/10 text-center">
-              <div>
-                <p className="text-2xl font-serif">4</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Dashboards</p>
-              </div>
-              <div>
-                <p className="text-2xl font-serif">4</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Pivot Tables</p>
-              </div>
-              <div>
-                <p className="text-2xl font-serif">Multi</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Insights</p>
-              </div>
-            </div>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span key={item} className="chip">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
-
-          {/* Beauty Book */}
-          <div className="h-full rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 backdrop-blur-sm hover:bg-primary-foreground/10 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-11 h-11 rounded-2xl bg-primary-foreground/10 flex items-center justify-center">
-                <Calendar className="w-5 h-5 text-primary-foreground/80" />
-              </div>
-              <p className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/50">
-                Web Application
-              </p>
-            </div>
-
-            <h3 className="font-serif text-2xl md:text-3xl mb-5">
-              Beauty Book
-            </h3>
-
-            <div className="mb-6 rounded-2xl overflow-hidden border border-primary-foreground/15 bg-white p-4 shadow-lg">
-              <img
-                src={beautyBookHome}
-                alt="Beauty Book"
-                className="w-full h-72 object-contain"
-              />
-            </div>
-
-            <p className="text-primary-foreground/70 leading-8 mb-6">
-              Appointment and client management application designed to streamline scheduling,
-              service tracking, and approval workflows.
-            </p>
-
-            <div className="flex flex-wrap gap-2 mb-8">
-              <span className="chip">HTML</span>
-              <span className="chip">CSS</span>
-              <span className="chip">JavaScript</span>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-primary-foreground/10 text-center">
-              <div>
-                <p className="text-2xl font-serif">Multi</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Pages</p>
-              </div>
-              <div>
-                <p className="text-2xl font-serif">UI</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Design</p>
-              </div>
-              <div>
-                <p className="text-2xl font-serif">Live</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">Project</p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

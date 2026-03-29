@@ -1,13 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="py-8 px-6 border-t border-border">
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Sidra Fiaz
-        </p>
-        <p className="text-xs text-muted-foreground">
-          Data Analytics · Operations · Business Intelligence
-        </p>
+    <footer className="px-4 pb-10 pt-4 md:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-border/80 pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+        <p>© {new Date().getFullYear()} Sidra Fiaz</p>
+        <p>Data Analytics, Operations, Dashboards, and business-facing technical work</p>
       </div>
     </footer>
   );
