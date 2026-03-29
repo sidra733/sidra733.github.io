@@ -23,9 +23,6 @@ const Hero = () => {
       <div className="section-shell section-grid mx-auto max-w-6xl px-6 py-10 md:px-10 md:py-12">
         <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_0.9fr]">
           <div>
-            <p className="mb-4 text-sm uppercase tracking-[0.42em] text-muted-foreground">
-              Sidra Fiaz
-            </p>
             <h1 className="text-balance max-w-3xl text-5xl font-bold leading-[0.95] text-foreground md:text-7xl">
               Sidra Fiaz
             </h1>
