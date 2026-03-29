@@ -32,13 +32,12 @@ const Hero = () => {
               Sidra Fiaz
             </p>
             <h1 className="text-balance max-w-3xl text-5xl font-bold leading-[0.95] text-foreground md:text-7xl">
-              Building cleaner decisions from messy operational data.
+              Data Analyst and Computer Science graduate.
             </h1>
 
             <p className="text-balance mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-              I turn spreadsheets, workflows, and performance metrics into dashboards and
-              recommendations teams can actually use. My work sits at the intersection of
-              analytics, business operations, and practical problem solving.
+              I’m interested in data, business, and operations roles where I can use SQL,
+              dashboards, and reporting to support better decisions.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
