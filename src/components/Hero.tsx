@@ -27,11 +27,11 @@ const Hero = () => {
               Sidra Fiaz
             </p>
             <h1 className="text-balance max-w-3xl text-5xl font-bold leading-[0.95] text-foreground md:text-7xl">
-              Data Analyst.
+              Sidra Fiaz
             </h1>
 
             <p className="text-balance mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-              Computer Science graduate with experience in SQL, Power BI, Excel, and reporting.
+              Computer Science graduate with experience in data, reporting, business, and operations work.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -51,10 +51,16 @@ const Hero = () => {
                 <ArrowUpRight className="h-4 w-4" />
               </a>
               <a
+                href="#about"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
+              >
+                Scroll down
+              </a>
+              <a
                 href="https://github.com/sidra733"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
+                className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition hover:text-foreground"
               >
                 <Github className="h-4 w-4" />
                 GitHub
@@ -75,8 +81,8 @@ const Hero = () => {
             <div className="rounded-[1.4rem] border border-white/10 bg-slate-950/70 p-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-primary">Current focus</p>
-                  <p className="mt-2 text-xl font-semibold text-white">Data analytics for real business workflows</p>
+                  <p className="text-xs uppercase tracking-[0.35em] text-primary">Highlights</p>
+                  <p className="mt-2 text-xl font-semibold text-white">Project and experience snapshots</p>
                 </div>
                 <div className="rounded-2xl border border-primary/20 bg-primary/10 p-3 text-primary">
                   <Database className="h-6 w-6" />
@@ -90,14 +96,6 @@ const Hero = () => {
                     <p className="mt-1 text-sm text-slate-300">{metric.label}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/10 p-4">
-                <p className="text-xs uppercase tracking-[0.3em] text-accent">Role targets</p>
-                <p className="mt-2 text-sm leading-7 text-slate-100">
-                  Data Analyst, Business Analyst, Operations Analyst, and entry-level product
-                  or insights roles where technical fluency matters.
-                </p>
               </div>
             </div>
           </div>
