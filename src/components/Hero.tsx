@@ -1,4 +1,4 @@
-import { ArrowUpRight, Database, Github, Linkedin, Sparkles } from "lucide-react";
+import { ArrowUpRight, Database, Github, Linkedin } from "lucide-react";
 
 const signals = [
   "SQL + Power BI reporting",
@@ -23,21 +23,15 @@ const Hero = () => {
       <div className="section-shell section-grid mx-auto max-w-6xl px-6 py-10 md:px-10 md:py-12">
         <div className="grid items-center gap-10 lg:grid-cols-[1.35fr_0.9fr]">
           <div>
-            <div className="eyebrow mb-6">
-              <Sparkles className="h-3.5 w-3.5" />
-              Analyst portfolio with a product mindset
-            </div>
-
             <p className="mb-4 text-sm uppercase tracking-[0.42em] text-muted-foreground">
               Sidra Fiaz
             </p>
             <h1 className="text-balance max-w-3xl text-5xl font-bold leading-[0.95] text-foreground md:text-7xl">
-              Data Analyst and Computer Science graduate.
+              Data Analyst.
             </h1>
 
             <p className="text-balance mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-              I’m interested in data, business, and operations roles where I can use SQL,
-              dashboards, and reporting to support better decisions.
+              Computer Science graduate with experience in SQL, Power BI, Excel, and reporting.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
