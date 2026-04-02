@@ -35,15 +35,15 @@ const projects = [
     title: "Beauty Book",
     tag: "Workflow Application",
     icon: Calendar,
-    image: "/images/beauty-book-home.png",
-    imageShellClassName: "p-3",
-    imageClassName: "h-56 object-cover object-top",
+    image: "/images/beauty-book-request.png",
+    imageShellClassName: "p-1.5",
+    imageClassName: "h-36 object-contain object-center bg-slate-950",
     description:
       "Designed a service scheduling and client management app to streamline appointment handling, customer support workflows, and approval processes.",
     impact: [
-      "Multi-page client flow",
-      "Workflow-focused UI patterns",
-      "Operational support for salon bookings",
+      "Request form writes client details to local storage",
+      "Survey flow adapts to selected services",
+      "Admin approval screen surfaces submitted client data",
     ],
     stack: ["HTML", "CSS", "JavaScript"],
   },
@@ -118,13 +118,18 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {project.title === "Supply Chain Performance Dashboard" && (
+                {(project.title === "Supply Chain Performance Dashboard" ||
+                  project.title === "Beauty Book") && (
                   <div className="mt-6">
                     <Link
-                      to="/supply-chain-dashboard"
+                      to={
+                        project.title === "Supply Chain Performance Dashboard"
+                          ? "/supply-chain-dashboard"
+                          : "/beauty-book-workflow"
+                      }
                       className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
                     >
-                      View dashboard
+                      {project.title === "Supply Chain Performance Dashboard" ? "View dashboard" : "View project"}
                       <ChevronRight className="h-4 w-4" />
                     </Link>
                   </div>
