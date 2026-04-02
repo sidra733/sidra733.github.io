@@ -21,7 +21,7 @@ const projects = [
     icon: Truck,
     image: "/images/supply-chain-dashboard-new.png",
     imageShellClassName: "p-2",
-    imageClassName: "h-52 object-cover object-center",
+    imageClassName: "h-48 object-contain object-center bg-slate-950",
     description:
       "Analyzed supplier, transportation, and regional performance to surface delivery bottlenecks, shipping cost issues, and fulfillment inefficiencies.",
     impact: [
