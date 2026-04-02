@@ -18,16 +18,11 @@ const Certifications = () => {
     <section id="certifications" className="px-4 py-8 md:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="section-shell px-6 py-10 md:px-10 md:py-12">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
             <div>
               <div className="eyebrow">Credentials</div>
               <h2 className="mt-5 text-4xl font-bold text-foreground md:text-5xl">Certifications</h2>
             </div>
-            <p className="max-w-xl text-sm leading-7 text-muted-foreground">
-              Formal coursework matters more when it clearly supports the work. These credentials
-              reinforce my focus on structured analysis, questioning assumptions, and building
-              reporting habits that support decision-making.
-            </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">

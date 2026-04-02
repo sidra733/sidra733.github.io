@@ -24,11 +24,6 @@ const highlights = [
     value: "PAKSA President",
     detail: "Led a 15-member board and coordinated events serving 200 to 300+ attendees.",
   },
-  {
-    label: "Style",
-    value: "Builder + communicator",
-    detail: "I like translating metrics into decisions that non-technical teams can act on.",
-  },
 ];
 
 const About = () => {
@@ -49,7 +44,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2">
               {highlights.map((item) => (
                 <div key={item.label} className="rounded-[1.5rem] border border-border bg-secondary/35 p-5">
                   <p className="text-xs uppercase tracking-[0.3em] text-primary">{item.label}</p>

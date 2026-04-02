@@ -50,7 +50,7 @@ const Projects = () => {
     <section id="projects" className="px-4 py-8 md:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="section-shell px-6 py-10 md:px-10 md:py-12">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
             <div className="max-w-2xl">
               <div className="eyebrow">Projects</div>
               <h2 className="mt-5 text-4xl font-bold text-foreground md:text-5xl">Projects</h2>
@@ -59,10 +59,6 @@ const Projects = () => {
                 metric, structure the data, and present the result in a way a team can actually use.
               </p>
             </div>
-            <p className="max-w-sm text-sm leading-7 text-muted-foreground">
-              My portfolio mixes analysis, operations thinking, and interface work because I often
-              operate between the data layer and the people consuming it.
-            </p>
           </div>
 
           <div className="mt-10 grid gap-6 xl:grid-cols-3">
