@@ -48,7 +48,7 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="px-4 py-8 md:px-6">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <div className="section-shell px-6 py-10 md:px-10 md:py-12">
           <div className="max-w-2xl">
             <div className="eyebrow">Projects</div>
@@ -59,7 +59,7 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 xl:grid-cols-3">
+          <div className="mt-10 grid gap-6 xl:grid-cols-2">
             {projects.map((project) => (
               <article
                 key={project.title}
