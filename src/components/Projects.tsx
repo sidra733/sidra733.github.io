@@ -121,17 +121,23 @@ const Projects = () => {
                 {(project.title === "Supply Chain Performance Dashboard" ||
                   project.title === "Beauty Book") && (
                   <div className="mt-6">
-                    <Link
-                      to={
-                        project.title === "Supply Chain Performance Dashboard"
-                          ? "/supply-chain-dashboard"
-                          : "/beauty-book-workflow"
-                      }
-                      className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
-                    >
-                      {project.title === "Supply Chain Performance Dashboard" ? "View dashboard" : "View project"}
-                      <ChevronRight className="h-4 w-4" />
-                    </Link>
+                    {project.title === "Supply Chain Performance Dashboard" ? (
+                      <Link
+                        to="/supply-chain-dashboard"
+                        className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
+                      >
+                        View dashboard
+                        <ChevronRight className="h-4 w-4" />
+                      </Link>
+                    ) : (
+                      <a
+                        href="/beauty-book-project.html"
+                        className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
+                      >
+                        View project
+                        <ChevronRight className="h-4 w-4" />
+                      </a>
+                    )}
                   </div>
                 )}
               </article>

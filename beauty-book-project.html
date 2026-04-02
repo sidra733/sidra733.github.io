@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty Book Workflow</title>
+    <style>
+      :root {
+        --bg: #08101b;
+        --panel: rgba(14, 20, 34, 0.9);
+        --border: rgba(120, 146, 184, 0.18);
+        --text: #f5f7fb;
+        --muted: #9aa8c1;
+        --accent: #63d2ff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(46, 72, 124, 0.28), transparent 30%),
+          linear-gradient(180deg, #0b1421, #060b14);
+        color: var(--text);
+      }
+      main {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 96px 20px 48px;
+      }
+      .shell {
+        border: 1px solid var(--border);
+        border-radius: 32px;
+        background: linear-gradient(180deg, rgba(16, 12, 26, 0.97), rgba(8, 9, 17, 0.98));
+        box-shadow: 0 40px 120px -70px rgba(0, 0, 0, 0.95);
+        padding: 24px;
+      }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 12px 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+      }
+      .eyebrow {
+        margin: 24px 0 0;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.28em;
+        font-size: 12px;
+      }
+      h1 {
+        margin: 12px 0 0;
+        font-size: clamp(40px, 7vw, 72px);
+        line-height: 0.95;
+      }
+      .lede {
+        max-width: 860px;
+        color: var(--muted);
+        line-height: 1.8;
+        font-size: 16px;
+        margin: 18px 0 0;
+      }
+      .feature-grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 24px;
+        grid-template-columns: 1.08fr 0.92fr;
+      }
+      .panel, .walkthrough {
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(255,255,255,0.04);
+        padding: 18px;
+      }
+      .panel p.kicker, .walkthrough p.kicker {
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.28em;
+        font-size: 11px;
+        margin: 0;
+      }
+      .panel h2, .walkthrough h2 {
+        margin: 10px 0 0;
+        font-size: 32px;
+      }
+      .panel .copy, .walkthrough .copy {
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 15px;
+        margin: 12px 0 0;
+      }
+      .frame {
+        margin-top: 18px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: rgba(8, 16, 27, 0.75);
+        padding: 12px;
+      }
+      .frame img {
+        width: 100%;
+        display: block;
+        border-radius: 16px;
+      }
+      .walkthrough {
+        margin-top: 18px;
+      }
+      .shots {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 20px;
+      }
+      .shot {
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.03);
+        padding: 16px;
+      }
+      .shot h3 {
+        margin: 0;
+        font-size: 22px;
+      }
+      .shot p {
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 15px;
+        margin: 10px 0 14px;
+      }
+      .shot .frame { margin-top: 0; }
+      @media (max-width: 980px) {
+        .feature-grid, .shots { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="shell">
+        <a class="back" href="/#projects">← Portfolio</a>
+        <p class="eyebrow">Workflow Application</p>
+        <h1>Beauty Book Workflow</h1>
+        <p class="lede">
+          A salon booking project built around a simple but useful workflow: capture client
+          requests, branch into service-specific surveys, and surface the final submission to an
+          admin approval screen. This page focuses on the strongest evidence from the actual app.
+        </p>
+
+        <div class="feature-grid">
+          <article class="panel">
+            <p class="kicker">Client View</p>
+            <h2>Landing And Request Entry</h2>
+            <p class="copy">
+              The request page is the strongest entry screenshot because it shows the actual data
+              capture flow clearly: client info, appointment slot, and service selection.
+            </p>
+            <div class="frame">
+              <img src="/images/beauty-book-request.png" alt="Beauty Book request page" />
+            </div>
+          </article>
+
+          <article class="panel">
+            <p class="kicker">Admin View</p>
+            <h2>Submitted Data Shown For Approval</h2>
+            <p class="copy">
+              This is the strongest admin screenshot because it proves the project does more than
+              collect input. It shows the saved request and survey data surfaced for review.
+            </p>
+            <div class="frame">
+              <img src="/images/beauty-book-approval-pending.png" alt="Beauty Book approval page" />
+            </div>
+          </article>
+        </div>
+
+        <article class="walkthrough">
+          <p class="kicker">Walkthrough</p>
+          <h2>End-To-End Screenshots</h2>
+          <p class="copy">
+            These are the real screens from the working app, sequenced to show the full client to
+            admin workflow.
+          </p>
+
+          <div class="shots">
+            <section class="shot">
+              <h3>Request Form</h3>
+              <p>Client details, date, time, and service selections are entered here.</p>
+              <div class="frame"><img src="/images/beauty-book-request.png" alt="Request form" /></div>
+            </section>
+            <section class="shot">
+              <h3>Service Survey</h3>
+              <p>Only the selected services continue into follow-up questions.</p>
+              <div class="frame"><img src="/images/beauty-book-survey.png" alt="Service survey" /></div>
+            </section>
+            <section class="shot">
+              <h3>Thank You Step</h3>
+              <p>The client-facing flow closes with confirmation messaging.</p>
+              <div class="frame"><img src="/images/beauty-book-thank-you.png" alt="Thank you page" /></div>
+            </section>
+            <section class="shot">
+              <h3>Admin Login</h3>
+              <p>The project includes a simple admin handoff through a login screen.</p>
+              <div class="frame"><img src="/images/beauty-book-login.png" alt="Admin login" /></div>
+            </section>
+            <section class="shot">
+              <h3>Pending Approval</h3>
+              <p>Submitted request data is shown to the admin before approval.</p>
+              <div class="frame"><img src="/images/beauty-book-approval-pending.png" alt="Pending approval" /></div>
+            </section>
+            <section class="shot">
+              <h3>Approved Record</h3>
+              <p>After approval, the request moves into the approved list view.</p>
+              <div class="frame"><img src="/images/beauty-book-approved.png" alt="Approved record" /></div>
+            </section>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+  </html>
