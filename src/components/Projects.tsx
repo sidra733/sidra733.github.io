@@ -1,4 +1,5 @@
 import { BarChart3, Calendar, ChevronRight, Truck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -18,7 +19,7 @@ const projects = [
     title: "Supply Chain Performance Dashboard",
     tag: "Operations Analytics",
     icon: Truck,
-    image: "/images/supply-chain-dashboard.png",
+    image: "/images/supply-chain-dashboard-new.png",
     description:
       "Analyzed supplier, transportation, and regional performance to surface delivery bottlenecks, shipping cost issues, and fulfillment inefficiencies.",
     impact: [
@@ -114,6 +115,18 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {project.title === "Supply Chain Performance Dashboard" && (
+                  <div className="mt-6">
+                    <Link
+                      to="/supply-chain-dashboard"
+                      className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
+                    >
+                      View dashboard
+                      <ChevronRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                )}
               </article>
             ))}
           </div>
