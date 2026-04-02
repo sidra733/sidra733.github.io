@@ -18,11 +18,9 @@ const Certifications = () => {
     <section id="certifications" className="px-4 py-8 md:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="section-shell px-6 py-10 md:px-10 md:py-12">
-          <div>
-            <div>
-              <div className="eyebrow">Credentials</div>
-              <h2 className="mt-5 text-4xl font-bold text-foreground md:text-5xl">Certifications</h2>
-            </div>
+          <div className="max-w-2xl">
+            <div className="eyebrow">Credentials</div>
+            <h2 className="mt-5 text-4xl font-bold text-foreground md:text-5xl">Certifications</h2>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">

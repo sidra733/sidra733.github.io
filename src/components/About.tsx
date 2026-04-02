@@ -31,7 +31,7 @@ const About = () => {
     <section id="about" className="px-4 py-8 md:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="section-shell px-6 py-10 md:px-10 md:py-12">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <div className="eyebrow">About</div>
               <h2 className="mt-5 max-w-lg text-4xl font-bold leading-tight text-foreground md:text-5xl">
@@ -44,7 +44,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2 lg:max-w-2xl">
               {highlights.map((item) => (
                 <div key={item.label} className="rounded-[1.5rem] border border-border bg-secondary/35 p-5">
                   <p className="text-xs uppercase tracking-[0.3em] text-primary">{item.label}</p>
