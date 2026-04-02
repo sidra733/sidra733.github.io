@@ -20,6 +20,8 @@ const projects = [
     tag: "Operations Analytics",
     icon: Truck,
     image: "/images/supply-chain-dashboard-new.png",
+    imageShellClassName: "p-2",
+    imageClassName: "h-52 object-cover object-center",
     description:
       "Analyzed supplier, transportation, and regional performance to surface delivery bottlenecks, shipping cost issues, and fulfillment inefficiencies.",
     impact: [
@@ -34,6 +36,8 @@ const projects = [
     tag: "Workflow Application",
     icon: Calendar,
     image: "/images/beauty-book-home.png",
+    imageShellClassName: "p-3",
+    imageClassName: "h-56 object-cover object-top",
     description:
       "Designed a service scheduling and client management app to streamline appointment handling, customer support workflows, and approval processes.",
     impact: [
@@ -59,7 +63,7 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 xl:grid-cols-2">
+          <div className="mt-10 grid gap-6 xl:grid-cols-3">
             {projects.map((project) => (
               <article
                 key={project.title}
@@ -79,11 +83,15 @@ const Projects = () => {
                 <p className="mt-4 text-sm leading-7 text-muted-foreground">{project.description}</p>
 
                 {project.image && (
-                  <div className="mt-6 overflow-hidden rounded-[1.4rem] border border-border bg-slate-950/80 p-3">
+                  <div
+                    className={`mt-6 overflow-hidden rounded-[1.4rem] border border-border bg-slate-950/80 ${
+                      project.imageShellClassName ?? "p-3"
+                    }`}
+                  >
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="h-56 w-full rounded-[1rem] object-cover object-top"
+                      className={`w-full rounded-[1rem] ${project.imageClassName ?? "h-56 object-cover object-top"}`}
                     />
                   </div>
                 )}
