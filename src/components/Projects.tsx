@@ -1,5 +1,4 @@
 import { BarChart3, Calendar, ChevronRight, Truck } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -30,6 +29,8 @@ const projects = [
       "Trend analysis across 3 product categories",
     ],
     stack: ["Excel", "Pivot Tables", "Dashboard Design"],
+    ctaLabel: "View dashboard",
+    ctaHref: "/supply-chain-dashboard",
   },
   {
     title: "Beauty Book",
@@ -46,6 +47,8 @@ const projects = [
       "Admin approval screen surfaces submitted client data",
     ],
     stack: ["HTML", "CSS", "JavaScript"],
+    ctaLabel: "View project",
+    ctaHref: "/beauty-book-project.html",
   },
 ];
 
@@ -118,26 +121,15 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {(project.title === "Supply Chain Performance Dashboard" ||
-                  project.title === "Beauty Book") && (
+                {project.ctaHref && (
                   <div className="mt-6">
-                    {project.title === "Supply Chain Performance Dashboard" ? (
-                      <Link
-                        to="/supply-chain-dashboard"
-                        className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
-                      >
-                        View dashboard
-                        <ChevronRight className="h-4 w-4" />
-                      </Link>
-                    ) : (
-                      <a
-                        href="/beauty-book-project.html"
-                        className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
-                      >
-                        View project
-                        <ChevronRight className="h-4 w-4" />
-                      </a>
-                    )}
+                    <a
+                      href={project.ctaHref}
+                      className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {project.ctaLabel}
+                      <ChevronRight className="h-4 w-4" />
+                    </a>
                   </div>
                 )}
               </article>
